@@ -1,0 +1,39 @@
+USE salesdb
+SELECT
+firstName,
+lastName,
+email,
+officecode
+FROM
+employees;
+SELECT employees.employee number,office.city
+FROM employees
+INNER JOIN offices ON employees.officecode=offices.officecode;
+
+
+SELECT
+product name,
+product vendor,
+product line
+FROM
+products;
+SELECT products.product name,productlines.product line
+FROM products
+LEFT JOIN productlines ON products.product line=productlines.product line
+ORDER BY products.product name;
+
+
+
+SELECT
+orderDate,
+shippedDate,
+status,
+customerNumber
+FROM
+orders;
+WHERE
+orderNumber="10100-10900";
+SELECT customers.customerNumber,orders.orderDate
+FROM customers
+RIGHT JOIN orders ON customers.customerNumber=orders.customerNumber
+ORDER BY customer.customerNumber;
